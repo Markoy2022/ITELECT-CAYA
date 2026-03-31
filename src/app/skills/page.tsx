@@ -1,73 +1,146 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { Code2, Globe, Terminal } from "lucide-react";
+import { 
+  Code2, 
+  Palette, 
+  Terminal, 
+  Zap, 
+  Database, 
+  Globe, 
+  Wind,
+  Layout,
+  Atom,
+  PenTool
+} from "lucide-react";
 
-const GithubIcon = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+const LaravelIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M11 3.5l-1.5 1.5h-3.5l-1.5 1.5v3.5l-1.5 1.5v6l1.5 1.5h3.5l1.5 1.5h6l1.5-1.5v-3.5l1.5-1.5v-6l-1.5-1.5h-3.5l-1.5-1.5h-6z" />
+    <path d="M11 8.5v6" />
+    <path d="M8.5 11.5h6" />
   </svg>
 );
 
 export default function Skills() {
   const skills = [
-    { name: "DESIGN", progress: 85, color: "bg-green-700" },
-    { name: "WEB DEV", progress: 75, color: "bg-blue-600" },
-    { name: "MOBILE", progress: 90, color: "bg-green-800" },
+    { 
+      name: "HTML/CSS", 
+      progress: 65, 
+      color: "bg-green-700",
+      icon: <Layout className="w-6 h-6" />,
+      description: "Proficient in building structured and styled web pages with modern CSS features. Experienced in creating responsive layouts that work across all devices."
+    },
+    { 
+      name: "REACT", 
+      progress: 60, 
+      color: "bg-blue-600",
+      icon: <Atom className="w-6 h-6" />,
+      description: "Capable of developing interactive user interfaces using component-based architecture. Familiar with hooks, state management, and the React ecosystem."
+    },
+    { 
+      name: "FIGMA", 
+      progress: 85, 
+      color: "bg-purple-600",
+      icon: <PenTool className="w-6 h-6" />,
+      description: "Experienced in designing high-fidelity prototypes and user interfaces. Skilled in layout design, typography, and creating design systems."
+    },
+    { 
+      name: "JAVASCRIPT",   
+      progress: 70, 
+      color: "bg-yellow-600",
+      icon: <Code2 className="w-6 h-6" />,
+      description: "Moderate understanding of core programming concepts and ES6+ features. Able to implement complex logic and dynamic functionality in web apps."
+    },
+    { 
+      name: "UI/UX DESIGN", 
+      progress: 80, 
+      color: "bg-green-800",
+      icon: <Palette className="w-6 h-6" />,
+      description: "Focused on creating intuitive user experiences and aesthetically pleasing designs. Skilled in user research, wireframing, and usability testing."
+    },
+    { 
+      name: "LARAVEL", 
+      progress: 68, 
+      color: "bg-red-700",
+      icon: <LaravelIcon className="w-6 h-6" />,
+      description: "Experienced in backend development using the PHP Laravel framework. Knowledgeable in MVC architecture, routing, and database management."
+    },
   ];
 
-  const technologies = [
-    { icon: <Terminal className="w-8 h-8 text-green-600" />, name: "Node.js" },
-    { icon: <Globe className="w-8 h-8 text-blue-400" />, name: "React" },
-    { icon: <Code2 className="w-8 h-8 text-blue-600" />, name: "JS" },
-    { icon: <Code2 className="w-8 h-8 text-blue-500" />, name: "TS" },
-    { icon: <GithubIcon className="w-8 h-8 text-black" />, name: "GitHub" },
+  const tools = [
+    { name: "Node.js", icon: <Terminal className="w-5 h-5" />, description: "Runtime environment for server-side JS." },
+    { name: "Next.js", icon: <Zap className="w-5 h-5" />, description: "React framework for production-grade apps." },
+    { name: "Git", icon: <Globe className="w-5 h-5" />, description: "Version control for tracking code changes." },
+    { name: "Tailwind", icon: <Wind className="w-5 h-5" />, description: "Utility-first CSS for rapid UI styling." },
+    { name: "MySQL", icon: <Database className="w-5 h-5" />, description: "Relational database for structured data." },
   ];
 
   return (
     <div className="container mx-auto px-8 py-16">
-      <div className="bg-[#BFC873] rounded-[3rem] p-12 md:p-20 border border-black/10">
+      <div className="bg-[#BFC873] dark:bg-[#6b732e] rounded-[3rem] p-12 md:p-20 border border-black/10 transition-colors duration-300">
         <div className="flex flex-col items-center space-y-16">
           {/* Heading */}
-          <div className="text-center space-y-6">
-            <div className="w-48 h-1.5 bg-black rounded-full mx-auto"></div>
-            <div className="w-64 h-1 bg-black/30 rounded-full mx-auto"></div>
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter dark:text-white uppercase">SKILLS AND EXPERTISE</h1>
+            <div className="w-48 h-1.5 bg-black dark:bg-white rounded-full mx-auto"></div>
+            <div className="w-64 h-1 bg-black/30 dark:bg-white/30 rounded-full mx-auto"></div>
           </div>
 
           {/* Skill Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
             {skills.map((skill) => (
-              <Card key={skill.name} className="bg-gray-100 border-none rounded-3xl p-6">
-                <CardContent className="p-0 flex flex-col items-center space-y-6">
-                  <div className="w-24 h-1 bg-black/40 rounded-full"></div>
-                  <div className="w-full space-y-4">
-                    <div className="h-4 bg-gray-300 rounded-full overflow-hidden">
+              <Card key={skill.name} className="bg-gray-100 dark:bg-[#363737] border-none rounded-3xl p-8 transition-colors duration-300 shadow-lg group hover:scale-[1.02] transition-transform">
+                <CardContent className="p-0 flex flex-col space-y-6">
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="p-3 rounded-2xl bg-white dark:bg-zinc-800 text-[#BFC873] shadow-sm group-hover:bg-[#BFC873] group-hover:text-white transition-all duration-300">
+                      {skill.icon}
+                    </div>
+                    <div className="flex flex-col items-center space-y-1">
+                      <div className="text-sm font-bold tracking-widest uppercase text-zinc-800 dark:text-zinc-200">{skill.name}</div>
+                      <div className="w-8 h-0.5 bg-[#BFC873] opacity-50"></div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 text-center italic">
+                    &quot;{skill.description}&quot;
+                  </p>
+
+                  <div className="w-full space-y-4 pt-2">
+                    <div className="h-2.5 bg-gray-300 dark:bg-zinc-700 rounded-full overflow-hidden">
                       <div 
                         className={`h-full ${skill.color} transition-all duration-1000`} 
                         style={{ width: `${skill.progress}%` }}
                       ></div>
                     </div>
-                    <div className="w-16 h-1 bg-black/20 rounded-full mx-auto"></div>
+                    <div className="flex justify-between items-center px-1">
+                      <div className="w-8 h-0.5 bg-black/10 dark:bg-white/10 rounded-full"></div>
+                      <span className="text-xs font-bold text-zinc-600 dark:text-zinc-300">{skill.progress}%</span>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          {/* Technology Icons Bar */}
-          <div className="w-full bg-gray-100 rounded-3xl p-8 flex justify-center items-center gap-12 md:gap-20 overflow-x-auto border border-black/10 shadow-inner">
-            {technologies.map((tech, idx) => (
-              <div key={idx} className="flex flex-col items-center gap-2 hover:scale-110 transition-transform cursor-pointer">
-                {tech.icon}
-              </div>
-            ))}
+          {/* Tools Description Bar */}
+          <div className="w-full bg-gray-100 dark:bg-[#363737] rounded-3xl p-8 md:p-12 border border-black/10 dark:border-white/5 shadow-inner transition-colors duration-300">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+              {tools.map((tool, idx) => (
+                <div key={idx} className="flex flex-col items-center text-center space-y-3 group">
+                  <div className="p-2 rounded-xl bg-white dark:bg-zinc-800 text-[#BFC873] shadow-sm group-hover:bg-[#BFC873] group-hover:text-white transition-all duration-300">
+                    {tool.icon}
+                  </div>
+                  <div className="flex flex-col items-center space-y-1">
+                    <span className="text-xs font-bold tracking-[0.2em] text-black dark:text-white group-hover:text-[#BFC873] transition-colors">
+                      {tool.name.toUpperCase()}
+                    </span>
+                    <div className="w-4 h-[1px] bg-[#BFC873] opacity-50"></div>
+                  </div>
+                  <p className="text-[10px] leading-tight text-zinc-500 dark:text-zinc-400 font-medium">
+                    {tool.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

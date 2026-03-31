@@ -23,7 +23,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container mx-auto px-8 py-20 flex flex-col md:flex-row items-center justify-between gap-12 min-h-[80vh]">
         <div className="w-full md:w-1/2 flex flex-col gap-6 animate-in fade-in slide-in-from-left duration-1000">
-          <div className="w-full aspect-[4/3] bg-[#BFC873] dark:bg-[#BFC873]/80 rounded-[2.5rem] p-4 overflow-hidden relative group shadow-2xl">
+          <div className="w-full aspect-[4/3] bg-[#BFC873] dark:bg-[#6b732e] rounded-[2.5rem] p-4 overflow-hidden relative group shadow-2xl transition-colors duration-300">
             <Image 
               src="/profile.jpg" 
               alt="Profile" 
@@ -32,7 +32,7 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="w-full h-24 bg-[#BFC873] dark:bg-[#BFC873]/80 rounded-3xl flex items-center justify-center px-8">
+          <div className="w-full h-24 bg-[#BFC873] dark:bg-[#6b732e] rounded-3xl flex items-center justify-center px-8 transition-colors duration-300">
             <div className="flex justify-between w-full text-white text-[10px] font-bold tracking-[0.2em]">
               <a href="#" className="hover:scale-105 transition-transform">GITHUB</a>
               <a href="#" className="hover:scale-105 transition-transform">DRIBBBLE</a>
@@ -71,16 +71,16 @@ export default function Home() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="bg-zinc-100 dark:bg-zinc-900/50 py-32 transition-colors duration-500">
+      <section className="bg-zinc-100 dark:bg-[#363737]/50 py-32 transition-colors duration-500">
         <div className="container mx-auto px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="space-y-4">
               <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">FEATURED PROJECTS</h2>
-              <div className="w-24 h-2 bg-[#BFC873] rounded-full"></div>
+              <div className="w-24 h-2 bg-[#BFC873] dark:bg-[#6b732e] rounded-full transition-colors duration-300"></div>
             </div>
             <Link 
               href="/projects" 
-              className="text-xs font-bold tracking-widest border-b-2 border-black dark:border-white pb-1 hover:text-[#BFC873] hover:border-[#BFC873] transition-all"
+              className="text-xs font-bold tracking-widest border-b-2 border-black dark:border-white pb-1 hover:text-[#BFC873] dark:hover:text-[#6b732e] hover:border-[#BFC873] dark:hover:border-[#6b732e] transition-all"
             >
               VIEW ALL PROJECTS
             </Link>
@@ -88,7 +88,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {featuredProjects.map((project, idx) => (
-              <div key={idx} className="group relative aspect-[16/10] rounded-[3rem] overflow-hidden bg-white dark:bg-zinc-800 shadow-xl">
+              <div key={idx} className="group relative aspect-[16/10] rounded-[3rem] overflow-hidden bg-white dark:bg-zinc-800 shadow-xl transition-colors duration-300">
                 <Image 
                   src={project.image} 
                   alt={project.title} 
@@ -97,7 +97,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
                 <div className="absolute bottom-10 left-10 text-white space-y-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-[10px] font-bold tracking-[0.3em] text-[#BFC873]">{project.category}</p>
+                  <p className="text-[10px] font-bold tracking-[0.3em] text-[#BFC873] dark:text-[#6b732e]">{project.category}</p>
                   <h3 className="text-3xl font-bold tracking-tighter">{project.title}</h3>
                 </div>
                 <Link href={project.href} className="absolute inset-0 z-10" />
@@ -109,7 +109,7 @@ export default function Home() {
 
       {/* Resume/Experience Section */}
       <section className="container mx-auto px-8 py-32">
-        <div className="bg-[#BFC873] dark:bg-[#BFC873]/90 rounded-[4rem] p-12 md:p-24 text-white relative overflow-hidden group shadow-2xl">
+        <div className="bg-[#BFC873] dark:bg-[#6b732e] rounded-[4rem] p-12 md:p-24 text-white relative overflow-hidden group shadow-2xl transition-colors duration-300">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl group-hover:bg-white/20 transition-all duration-700"></div>
           
           <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-16">
@@ -123,7 +123,7 @@ export default function Home() {
                   <Download className="w-4 h-4" />
                   DOWNLOAD RESUME
                 </button>
-                <Link href="mailto:contact@caya.com" className="flex items-center gap-3 px-8 py-4 bg-zinc-900 text-white rounded-full hover:bg-white hover:text-black transition-all duration-300 text-xs font-bold tracking-widest shadow-lg">
+                <Link href="mailto:contact@caya.com" className="flex items-center gap-3 px-8 py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-full hover:bg-white hover:text-black transition-all duration-300 text-xs font-bold tracking-widest shadow-lg">
                   GET IN TOUCH
                 </Link>
               </div>

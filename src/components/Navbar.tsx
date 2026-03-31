@@ -13,9 +13,11 @@ const Navbar = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const timeoutId = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timeoutId);
   }, []);
-
   const navLinks = [
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/about" },
@@ -25,7 +27,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full border-b border-black/10 dark:border-white/10 py-6 px-8 flex justify-between items-center bg-[#E5E5E5] dark:bg-zinc-950 transition-colors duration-300">
+    <nav className="w-full border-b border-black/10 dark:border-white/10 py-6 px-8 flex justify-between items-center bg-[#E5E5E5] dark:bg-[#363737] transition-colors duration-300">
       <Link 
         href="/" 
         className="text-2xl md:text-3xl font-bold tracking-tighter hover:opacity-70 transition-opacity"
@@ -42,7 +44,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "text-xs font-bold transition-all relative tracking-widest",
+                  "text-sm font-bold transition-all relative tracking-widest",
                   isActive 
                     ? "text-black dark:text-white" 
                     : "text-zinc-500 hover:text-black dark:hover:text-white"
@@ -50,7 +52,7 @@ const Navbar = () => {
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute -bottom-2 left-0 w-full h-[3px] bg-[#BFC873] rounded-full" />
+                  <span className="absolute -bottom-2 left-0 w-full h-[3px] bg-[#BFC873] dark:bg-[#6b732e] rounded-full transition-colors duration-300" />
                 )}
               </Link>
             );
@@ -60,7 +62,7 @@ const Navbar = () => {
         {mounted && (
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2.5 rounded-xl bg-zinc-200 dark:bg-zinc-800 hover:bg-[#BFC873] dark:hover:bg-[#BFC873] hover:text-white transition-all duration-300"
+            className="p-2.5 rounded-xl bg-zinc-200 dark:bg-zinc-800 hover:bg-[#BFC873] dark:hover:bg-[#6b732e] hover:text-white transition-all duration-300"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Link2 } from "lucide-react";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Projects() {
@@ -36,16 +36,16 @@ export default function Projects() {
   return (
     <div className="container mx-auto px-8 py-16 max-w-7xl">
       <header className="mb-20 text-center space-y-6">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">PROJECTS</h1>
-        <div className="w-32 h-2 bg-[#BFC873] mx-auto rounded-full"></div>
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter dark:text-white uppercase">PROJECTS</h1>
+        <div className="w-32 h-2 bg-[#BFC873] dark:bg-[#6b732e] mx-auto rounded-full transition-colors duration-300"></div>
         <p className="text-zinc-500 dark:text-zinc-400 text-lg max-w-2xl mx-auto">
-          A collection of digital experiences I've built from the ground up, combining logic with clean aesthetics.
+          A collection of digital experiences I&apos;ve built from the ground up, combining logic with clean aesthetics.
         </p>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {projects.map((project) => (
-          <Card key={project.id} className="bg-zinc-100 dark:bg-zinc-900 border-none rounded-[3rem] overflow-hidden group hover:shadow-2xl transition-all duration-700">
+          <Card key={project.id} className="bg-zinc-100 dark:bg-zinc-800 border-none rounded-[3rem] overflow-hidden group hover:shadow-2xl transition-all duration-700">
             <div className="relative h-72 md:h-96 w-full overflow-hidden">
               <Image 
                 src={project.image} 
@@ -56,14 +56,14 @@ export default function Projects() {
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-6">
                 <a 
                   href={project.github} 
-                  className="text-xs font-bold tracking-[0.3em] text-white hover:text-[#BFC873] transition-all transform translate-y-4 group-hover:translate-y-0"
+                  className="text-xs font-bold tracking-[0.3em] text-white hover:text-[#BFC873] dark:hover:text-[#6b732e] transition-all transform translate-y-4 group-hover:translate-y-0"
                 >
                   VIEW GITHUB
                 </a>
                 <div className="w-12 h-[1px] bg-white/20"></div>
                 <a 
                   href={project.demo} 
-                  className="text-xs font-bold tracking-[0.3em] text-white hover:text-[#BFC873] transition-all transform translate-y-4 group-hover:translate-y-0 delay-75"
+                  className="text-xs font-bold tracking-[0.3em] text-white hover:text-[#BFC873] dark:hover:text-[#6b732e] transition-all transform translate-y-4 group-hover:translate-y-0 delay-75"
                 >
                   LIVE DEMO
                 </a>
@@ -72,12 +72,12 @@ export default function Projects() {
             <CardHeader className="p-10 pb-4">
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map(tag => (
-                  <span key={tag} className="px-3 py-1 bg-white/50 dark:bg-white/10 text-[10px] font-bold tracking-widest rounded-full uppercase">
+                  <span key={tag} className="px-3 py-1 bg-white/50 dark:bg-white/10 text-[10px] font-bold tracking-widest rounded-full uppercase dark:text-white/70">
                     {tag}
                   </span>
                 ))}
               </div>
-              <CardTitle className="text-2xl md:text-3xl font-bold tracking-tight">
+              <CardTitle className="text-2xl md:text-3xl font-bold tracking-tight dark:text-white">
                 {project.title}
               </CardTitle>
             </CardHeader>
@@ -86,8 +86,8 @@ export default function Projects() {
                 {project.description}
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-1 bg-[#BFC873] rounded-full"></div>
-                <span className="text-xs font-bold tracking-widest uppercase">EXPLORE PROJECT</span>
+                <div className="w-12 h-1 bg-[#BFC873] dark:bg-[#6b732e] rounded-full transition-colors duration-300"></div>
+                <span className="text-xs font-bold tracking-widest uppercase dark:text-white">EXPLORE PROJECT</span>
               </div>
             </CardContent>
           </Card>
