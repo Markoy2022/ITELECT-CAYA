@@ -24,9 +24,13 @@ export default function About() {
               <div className="space-y-4 text-center md:text-left">
                 <div className="flex items-center justify-center md:justify-start gap-3 text-black dark:text-white">
                   <User className="w-6 h-6" />
-                  <h2 className="text-3xl font-bold tracking-tighter uppercase">Who am I</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter uppercase">John Mark Caya</h2>
                 </div>
                 <div className="w-24 h-1.5 bg-black dark:bg-white rounded-full mx-auto md:mx-0"></div>
+                <div className="space-y-2 text-sm font-bold tracking-widest text-black/60 dark:text-white/60 uppercase">
+                  <p>Ibabao, Cordova, Cebu</p>
+                  <p>09615251080</p>
+                </div>
                 <p className="text-lg leading-relaxed text-black/80 dark:text-white/80 max-w-lg">
                   I AM A PASSIONATE DESIGNER AND DEVELOPER DEDICATED TO CREATING SEAMLESS DIGITAL EXPERIENCES. 
                   MY APPROACH BLENDS CREATIVE ARTISTRY WITH TECHNICAL PRECISION TO SOLVE REAL-WORLD PROBLEMS.
@@ -84,10 +88,15 @@ export default function About() {
             </div>
 
             <div className="pt-8">
-              <button className="group w-full md:w-auto flex items-center justify-center gap-4 px-12 py-5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-[2rem] hover:bg-white hover:text-black dark:hover:bg-zinc-900 dark:hover:text-white transition-all duration-500 text-sm font-bold tracking-[0.2em] shadow-2xl uppercase">
+              <a 
+                href="https://caya-portfolio.vercel.app/assets/JCaya_Resume-CfnsM5el.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group w-full md:w-auto flex items-center justify-center gap-4 px-12 py-5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-[2rem] hover:bg-white hover:text-black dark:hover:bg-zinc-900 dark:hover:text-white transition-all duration-500 text-sm font-bold tracking-[0.2em] shadow-2xl uppercase"
+              >
                 <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
                 Download Resume
-              </button>
+              </a>
             </div>
           </div>
 

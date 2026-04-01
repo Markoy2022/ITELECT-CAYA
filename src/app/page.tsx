@@ -5,14 +5,8 @@ import { ArrowRight, Download, Code2 } from "lucide-react";
 export default function Home() {
   const featuredProjects = [
     {
-      title: "PROJECT ONE",
+      title: "CAYA-OS PORTFOLIO",
       category: "WEB DEVELOPMENT",
-      image: "/profile.jpg",
-      href: "/projects"
-    },
-    {
-      title: "PROJECT TWO",
-      category: "UI/UX DESIGN",
       image: "/profile.jpg",
       href: "/projects"
     }
@@ -34,9 +28,9 @@ export default function Home() {
           </div>
           <div className="w-full h-24 bg-[#BFC873] dark:bg-[#6b732e] rounded-3xl flex items-center justify-center px-8 transition-colors duration-300">
             <div className="flex justify-between w-full text-white text-[10px] font-bold tracking-[0.2em]">
-              <a href="#" className="hover:scale-105 transition-transform">GITHUB</a>
-              <a href="#" className="hover:scale-105 transition-transform">DRIBBBLE</a>
-              <a href="#" className="hover:scale-105 transition-transform">BEHANCE</a>
+              <a href="https://github.com/Markoy2022" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform">GITHUB</a>
+              <a href="https://www.facebook.com/JMarkCaya" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform">FACEBOOK</a>
+              <a href="mailto:johnmarkcaya222@gmail.com" className="hover:scale-105 transition-transform">GMAIL</a>
             </div>
           </div>
         </div>
@@ -119,11 +113,16 @@ export default function Home() {
                 I AM CURRENTLY AVAILABLE FOR FREELANCE WORK AND FULL-TIME OPPORTUNITIES. DOWNLOAD MY RESUME TO LEARN MORE ABOUT MY BACKGROUND.
               </p>
               <div className="flex flex-wrap gap-6">
-                <button className="flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full hover:bg-zinc-900 hover:text-white transition-all duration-300 text-xs font-bold tracking-widest shadow-lg">
+                <a 
+                  href="https://caya-portfolio.vercel.app/assets/JCaya_Resume-CfnsM5el.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full hover:bg-zinc-900 hover:text-white transition-all duration-300 text-xs font-bold tracking-widest shadow-lg"
+                >
                   <Download className="w-4 h-4" />
                   DOWNLOAD RESUME
-                </button>
-                <Link href="mailto:contact@caya.com" className="flex items-center gap-3 px-8 py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-full hover:bg-white hover:text-black transition-all duration-300 text-xs font-bold tracking-widest shadow-lg">
+                </a>
+                <Link href="mailto:johnmarkcaya222@gmail.com" className="flex items-center gap-3 px-8 py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-full hover:bg-white hover:text-black transition-all duration-300 text-xs font-bold tracking-widest shadow-lg">
                   GET IN TOUCH
                 </Link>
               </div>

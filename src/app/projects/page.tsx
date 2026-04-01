@@ -6,30 +6,12 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "ECOMMERCE PLATFORM",
-      description: "A full-stack ecommerce solution with Next.js, Stripe, and Tailwind CSS. Features real-time inventory and modern checkout.",
+      title: "CAYA-OS PORTFOLIO",
+      description: "My personal developer portfolio, built with React (via Vite) for fast development and smooth performance. It serves as a platform to showcase projects, skills, and contact details with a clean and modern design.",
       image: "/profile.jpg",
-      tags: ["Next.js", "Stripe", "Prisma"],
-      github: "#",
-      demo: "#"
-    },
-    {
-      id: 2,
-      title: "TASK MANAGEMENT APP",
-      description: "Real-time collaboration tool with drag-and-drop features and task tracking. Focused on high-performance UX.",
-      image: "/profile.jpg",
-      tags: ["React", "Supabase", "Framer Motion"],
-      github: "#",
-      demo: "#"
-    },
-    {
-      id: 3,
-      title: "AI IMAGE GENERATOR",
-      description: "Web application that uses AI to generate unique images based on user prompts. Integrated with OpenAI API.",
-      image: "/profile.jpg",
-      tags: ["Node.js", "OpenAI", "React"],
-      github: "#",
-      demo: "#"
+      tags: ["React", "Vite", "Tailwind CSS"],
+      github: "https://github.com/Markoy2022/caya-os.git",
+      demo: "https://caya-portfolio.vercel.app/"
     }
   ];
 

@@ -7,11 +7,9 @@ const Sidebar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const contacts = [
-    { label: "FACEBOOK", href: "#" },
-    { label: "GITHUB", href: "#" },
-    { label: "LINKEDIN", href: "#" },
-    { label: "EMAIL", href: "mailto:contact@caya.com" },
-    { label: "PHONE", href: "tel:+123456789" },
+    { label: "GITHUB", href: "https://github.com/Markoy2022" },
+    { label: "FACEBOOK", href: "https://www.facebook.com/JMarkCaya" },
+    { label: "GMAIL", href: "mailto:johnmarkcaya222@gmail.com" },
   ];
 
   return (
