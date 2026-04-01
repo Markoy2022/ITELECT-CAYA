@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Download, Code2 } from "lucide-react";
+import { ContactModal } from "@/components/ContactModal";
 
 export default function Home() {
   const featuredProjects = [
@@ -122,9 +123,13 @@ export default function Home() {
                   <Download className="w-4 h-4" />
                   DOWNLOAD RESUME
                 </a>
-                <Link href="mailto:johnmarkcaya222@gmail.com" className="flex items-center gap-3 px-8 py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-full hover:bg-white hover:text-black transition-all duration-300 text-xs font-bold tracking-widest shadow-lg">
-                  GET IN TOUCH
-                </Link>
+                <ContactModal 
+                  trigger={
+                    <button className="flex items-center gap-3 px-8 py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-full hover:bg-white hover:text-black transition-all duration-300 text-xs font-bold tracking-widest shadow-lg uppercase">
+                      GET IN TOUCH
+                    </button>
+                  }
+                />
               </div>
             </div>
 
