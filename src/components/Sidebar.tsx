@@ -14,7 +14,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className="fixed left-0 top-1/2 -translate-y-1/2 z-50 h-auto"
+      className="fixed left-0 top-1/2 -translate-y-1/2 z-[90] h-auto hidden md:block"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

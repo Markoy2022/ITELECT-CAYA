@@ -34,19 +34,19 @@ export default function Blog() {
   ];
 
   return (
-    <div className="container mx-auto px-8 py-16 max-w-6xl">
-      <header className="mb-16 text-center space-y-4">
+    <div className="container mx-auto px-6 md:px-8 py-12 md:py-16 max-w-6xl">
+      <header className="mb-12 md:mb-16 text-center space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tighter dark:text-white uppercase">BLOG</h1>
-        <div className="w-24 h-1.5 bg-[#BFC873] dark:bg-[#6b732e] mx-auto rounded-full transition-colors duration-300"></div>
-        <p className="text-zinc-500 dark:text-zinc-400 max-w-lg mx-auto">
+        <div className="w-20 md:w-24 h-1 md:h-1.5 bg-[#BFC873] dark:bg-[#6b732e] mx-auto rounded-full transition-colors duration-300"></div>
+        <p className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 max-w-lg mx-auto uppercase">
           Insights, tutorials, and personal stories about design and development.
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
         {posts.map((post) => (
-          <Card key={post.id} className="bg-white dark:bg-zinc-800 border-black/5 dark:border-white/5 overflow-hidden group hover:shadow-2xl transition-all duration-500 rounded-3xl">
-            <div className="relative h-56 w-full overflow-hidden">
+          <Card key={post.id} className="bg-white dark:bg-[#363737] border-black/5 dark:border-white/5 overflow-hidden group hover:shadow-2xl transition-all duration-500 rounded-[2rem] md:rounded-3xl">
+            <div className="relative h-48 md:h-56 w-full overflow-hidden">
               <Image 
                 src={post.image} 
                 alt={post.title} 
@@ -54,25 +54,25 @@ export default function Blog() {
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 bg-[#BFC873] dark:bg-[#6b732e] text-white text-[10px] font-bold tracking-widest rounded-full uppercase transition-colors duration-300">
+                <span className="px-3 py-1 bg-[#BFC873] dark:bg-[#6b732e] text-white text-[9px] md:text-[10px] font-bold tracking-widest rounded-full uppercase transition-colors duration-300">
                   {post.category}
                 </span>
               </div>
             </div>
-            <CardHeader className="space-y-3 pt-6">
-              <div className="flex items-center gap-4 text-[10px] text-zinc-400 font-medium uppercase tracking-wider">
+            <CardHeader className="space-y-3 pt-6 px-6 md:px-8">
+              <div className="flex items-center gap-4 text-[9px] md:text-[10px] text-zinc-400 font-medium uppercase tracking-wider">
                 <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" /> {post.date}</span>
                 <span className="flex items-center gap-1.5"><User className="w-3 h-3" /> {post.author}</span>
               </div>
-              <CardTitle className="text-xl font-bold leading-tight group-hover:text-[#BFC873] dark:group-hover:text-[#6b732e] transition-colors">
+              <CardTitle className="text-lg md:text-xl font-bold leading-tight group-hover:text-[#BFC873] dark:group-hover:text-[#6b732e] transition-colors uppercase">
                 {post.title}
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">
+            <CardContent className="px-6 md:px-8 pb-8">
+              <p className="text-xs md:text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6 uppercase">
                 {post.excerpt}
               </p>
-              <button className="text-xs font-bold tracking-widest text-black dark:text-white border-b-2 border-[#BFC873] dark:border-[#6b732e] pb-1 hover:border-black dark:hover:border-white transition-all">
+              <button className="text-[10px] md:text-xs font-bold tracking-widest text-black dark:text-white border-b-2 border-[#BFC873] dark:border-[#6b732e] pb-1 hover:border-black dark:hover:border-white transition-all uppercase">
                 READ MORE
               </button>
             </CardContent>
